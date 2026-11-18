@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cursor Extension Author"
+  short_description: "Build clear Cursor rules, skills, commands, hooks, and subagents"
+  brand_color: "#5B5BD6"

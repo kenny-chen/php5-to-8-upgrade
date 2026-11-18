@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+  <title id="title">php5-to-8-upgrade-v2 and Kiro</title>
+  <desc id="desc">Banner with php5-to-8-upgrade-v2 wordmark on the left and vector Kiro ghost logo on the right.</desc>
+  <defs>
+    <linearGradient id="base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12182a"/>
+      <stop offset="45%" stop-color="#0b0d17"/>
+      <stop offset="100%" stop-color="#080a12"/>
+    </linearGradient>
+    <linearGradient id="foldA" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.045"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="foldB" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.035"/>
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4b896"/>
+      <stop offset="50%" stop-color="#c5a073"/>
+      <stop offset="100%" stop-color="#a88455"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f5f0e8"/>
+      <stop offset="100%" stop-color="#d9cdb8"/>
+    </linearGradient>
+    <filter id="kiroGlow" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" result="violet" values="0 0 0 0 0.58  0 0 0 0 0.25  0 0 0 0 0.98  0 0 0 0.55 0"/>
+      <feMerge>
+        <feMergeNode in="violet"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="rightPane">
+      <rect x="652" y="22" width="612" height="356"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="400" fill="url(#base)"/>
+  <rect width="1280" height="400" fill="url(#foldA)"/>
+  <rect width="1280" height="400" fill="url(#foldB)"/>
+  <path d="M-80 420 L420 -40 L1280 120 L1280 400 L-80 400 Z" fill="#ffffff" opacity="0.018"/>
+  <path d="M200 480 L720 40 L1380 200 L1380 480 L200 480 Z" fill="#000000" opacity="0.08"/>
+
+  <rect x="14" y="14" width="1252" height="372" fill="none" stroke="url(#gold)" stroke-width="1.5"/>
+
+  <line x1="640" y1="40" x2="640" y2="360" stroke="url(#gold)" stroke-width="0.75" opacity="0.45"/>
+
+  <!-- Left: php5-to-8-upgrade-v2 -->
+  <g stroke="url(#gold)" stroke-width="0.85" opacity="0.9">
+    <line x1="48" y1="148" x2="280" y2="148"/>
+    <line x1="420" y1="148" x2="600" y2="148"/>
+    <line x1="48" y1="318" x2="280" y2="318"/>
+    <line x1="420" y1="318" x2="600" y2="318"/>
+  </g>
+  <circle cx="340" cy="148" r="2.5" fill="url(#gold)"/>
+  <circle cx="340" cy="318" r="2.5" fill="url(#gold)"/>
+
+  <text x="340" y="228" text-anchor="middle" fill="url(#cream)" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif">
+    <tspan x="340" font-size="108" font-weight="300" letter-spacing="0.05em">php5-to-8</tspan>
+    <tspan x="340" dy="92" font-size="90" font-weight="400" letter-spacing="0.08em" fill="#ebe3d4">upgrade-v2</tspan>
+  </text>
+
+  <!-- Right: ghost vertically centered, KIRO to its right; lockup centered in pane -->
+  <g clip-path="url(#rightPane)">
+    <g filter="url(#kiroGlow)">
+      <g transform="translate(548, 86) scale(2.12)">
+        <path fill="#ffffff" d="M 58 36 C 58 12 82 2 108 2 C 136 2 158 22 158 50 L 158 86 C 158 94 150 98 144 94 C 134 104 120 104 110 94 C 100 104 86 104 76 94 C 70 98 62 94 62 86 L 62 50 C 62 42 54 36 58 36 Z"/>
+        <ellipse cx="92" cy="46" rx="5.5" ry="9.5" fill="#0b0d17"/>
+        <ellipse cx="128" cy="46" rx="5.5" ry="9.5" fill="#0b0d17"/>
+      </g>
+      <text x="892" y="242" text-anchor="start" fill="#0b0d17" stroke="#c084fc" stroke-width="8.5" paint-order="stroke fill" font-family="'Arial Rounded MT Bold', 'Nunito', 'Varela Round', ui-rounded, sans-serif" font-size="92" font-weight="800" letter-spacing="0.05em">KIRO</text>
+    </g>
+  </g>
+</svg>

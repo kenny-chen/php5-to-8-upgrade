@@ -1,0 +1,21 @@
+# PHP 5 to 8 upgrade v2 — Kiro hook
+# This hook is triggered on user request to perform PHP upgrade steps
+
+## Trigger: User message contains "php5-to-8-upgrade" or "php upgrade"
+
+## Steps to execute (based on user input):
+# all or empty → steps 1-5 + git gate
+# 1-5 → start at step, continue to 5 + git gate  
+# reports-only → steps 2,4,5 only
+# index → step 1 only
+
+## Input parsing:
+# Extract <task> from user message after command keyword
+
+## Execution order:
+# Step 1: CodeGraph index (if needed)
+# Step 2: Find compatibility problems
+# Step 3: Auto-fix with PHPCBF
+# Step 4: Modernize with Rector
+# Step 5: Check types with PHPStan
+# After: Git diff validation gate

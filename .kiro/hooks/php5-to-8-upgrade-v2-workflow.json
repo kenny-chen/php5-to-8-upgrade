@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "php5-to-8-upgrade-v2-workflow",
+      "trigger": "PreTaskExec",
+      "action": {
+        "type": "command",
+        "command": ".\\.kiro\\hooks\\php5-to-8-main.ps1 -Task \"all\""
+      },
+      "description": "Run the first five php5-to-8-upgrade-v2 pipeline steps from the repo root, save reports under `reports/`, and stop before step 6 (PHPStan fixes in Cursor).",
+      "enabled": true
+    }
+  ]
+}

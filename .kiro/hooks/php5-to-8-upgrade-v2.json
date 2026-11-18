@@ -1,0 +1,61 @@
+{
+  "name": "php5-to-8-upgrade-v2",
+  "description": "PHP 5 to 8.5 upgrade pipeline with compatibility checking, auto-fixes, modernization, and type checking",
+  "trigger": {
+    "type": "command",
+    "patterns": [
+      "php5-to-8-upgrade",
+      "php upgrade"
+    ]
+  },
+  "input": {
+    "description": "Task specifier: 'all', '1-5', 'reports-only', or 'index'",
+    "required": false,
+    "default": "all"
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "name": "CodeGraph index",
+      "script": "php5-to-8-step-1-index.ps1",
+      "description": "Build CodeGraph analysis index if not present"
+    },
+    {
+      "id": "step-2",
+      "name": "Find problems",
+      "script": "php5-to-8-step-2-find-problems.ps1",
+      "description": "Run composer compat:report to identify compatibility issues"
+    },
+    {
+      "id": "step-3",
+      "name": "Auto-fix with PHPCBF",
+      "script": "php5-to-8-step-3-phpcbf.ps1",
+      "description": "Run composer compat:phpcbf to auto-fix compatibility problems"
+    },
+    {
+      "id": "step-4",
+      "name": "Modernize with Rector",
+      "script": "php5-to-8-step-4-rector.ps1",
+      "description": "Run composer rector:report to modernize code"
+    },
+    {
+      "id": "step-5",
+      "name": "Type check with PHPStan",
+      "script": "php5-to-8-step-5-phpstan.ps1",
+      "description": "Run composer stan:report for type checking"
+    }
+  ],
+  "git-gate": {
+    "enabled": true,
+    "skip-if": ["index"],
+    "description": "Validate git diff after upgrade steps"
+  },
+  "outputs": [
+    "Steps run summary",
+    "Report file paths",
+    "Scope summary (issue counts)",
+    "Git state",
+    "Git gate status",
+    "Next action"
+  ]
+}

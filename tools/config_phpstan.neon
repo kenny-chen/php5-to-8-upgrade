@@ -1,0 +1,19 @@
+parameters:
+    level: 10
+    phpVersion: 80500
+    fileExtensions:
+        - php
+        - inc
+    paths:
+        - ../index.php
+        - ../app
+        - ../lib
+        - ../modules
+        - ../public
+    excludePaths:
+        - ../lib/Classes (?)
+        - ../lib/JSPacker (?)
+        - ../third-party (?)
+        - ../vendor (?)
+        - . (?)
+    tmpDir: ../var/phpstan
