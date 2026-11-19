@@ -1,3 +1,5 @@
+> Key takeaway: Reusable AI components help teams upgrade legacy PHP faster, preserve domain knowledge, improve code quality, reduce security risks, and keep business systems stable during modernization.
+
 ## Modernize PHP without risking the business.
 
 ![PHP5 to 8 upgrade workflow screenshot](assets/screen008-20261118a.jpg)
