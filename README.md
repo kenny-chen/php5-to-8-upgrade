@@ -4,7 +4,7 @@
 
 ## Modernize PHP without risking the business.
 
-> PHP security risks are driving companies to upgrade, and php5-to-8-upgrade makes framework modernization as easy as a software update.
+> [PHP2Shel](https://en.wikipedia.org/wiki/PHP2Shell) security risks are driving companies to upgrade, and php5-to-8-upgrade makes framework modernization as easy as a software update.
 
 ### Beneficiaries
 
@@ -54,3 +54,8 @@ In Kiro Accept file changes:
 2/ Check `@php5-to-8-upgrade-v2` for the correct fixes.
 
 3/ Use `@kiro-extension-author` to add a *split()* to *explode()* example in `@upgrade-sample-code.md`.
+
+---
+[Kenny Chan](https://www.linkedin.com/in/kennychenkk/)
+
+Drive macro returns across market cycles through systematic signals and high-conviction risk allocation.
