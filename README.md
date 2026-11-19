@@ -58,4 +58,6 @@ In Kiro Accept file changes:
 ---
 [Kenny Chan](https://www.linkedin.com/in/kennychenkk/)
 
-Drive macro returns across market cycles through systematic signals and high-conviction risk allocation.
+SR 0.73 | SoR 3.2 | PF 1.8 | WR 58% | Skew +0.44 | 8Y Max DD 18% | Aggressive Convex Macro Alpha
+
+Top skills: Macro Trading • Structured Brokerage & Risk • QuantAI Solutions
