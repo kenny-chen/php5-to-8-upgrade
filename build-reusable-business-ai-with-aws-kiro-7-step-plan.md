@@ -4,7 +4,7 @@
 
 ![PHP5 to 8 upgrade workflow screenshot](assets/screen008-20261118a.jpg)
 
-> [PHP2Shel](https://en.wikipedia.org/wiki/PHP2Shell) security risks are driving companies to upgrade, and [php5-to-8-upgrade](https://github.com/kenny-chen/php5-to-8-upgrade) makes framework modernization as easy as a software update.
+> [PHP2Shell](https://en.wikipedia.org/wiki/PHP2Shell) security risks are driving companies to upgrade, and [php5-to-8-upgrade](https://github.com/kenny-chen/php5-to-8-upgrade) makes framework modernization as easy as a software update.
 
 ## Beneficiaries
 
@@ -79,6 +79,28 @@ Seventh, let the AI use LLM-specific tools. The goal is to achieve: **Engineerin
 3. Use codebase `RAG` to compare multiple projects.
 
 4. Use Cline’s `referenceMap` to load `.md` skills reliably.
+
+## Setup Checklist
+
+- [ ] **AI components:** Add `commands`, `skills`, `rules`, `workflows`, and `subagents`.
+
+- [ ] **Standard templates:** Each AI component must include a `role`, `goal`, `process`, `examples`, and `quality checks`.
+
+- [ ] **Shared tools:** Store reusable tools in `.script/tool.py`. Do not create temporary or duplicate tools.
+
+- [ ] **Domain documents:** Store business terms, rules, workflows, and database mappings in `.docs/`. Use `DDD` templates.
+
+- [ ] **Prompt standards:** Use one prompt standard for all `rules`, `skills`, `workflows`, and `subagents`.
+
+- [ ] **Goal-based rules:** Add `rules/code-reference.md` for coding and `rules/code-diff-validation.md` for code review.
+
+- [ ] **PHP upgrade tools:** Install `PHP_CodeSniffer`, `PHP Code Beautifier and Fixer`, `Rector`, and `PHPStan`.
+
+- [ ] **AI engineering tools:** Set up `CodeGraph`, `AST`, codebase `RAG`, `MCP`, and Cline `referenceMap`.
+
+- [ ] **Project commands:** Add `compat:report`, `compat:phpcbf`, `rector:report`, `stan:report`, `stan:batch`, `codegraph:init`, and `codegraph:sync`.
+
+- [ ] **Safety controls:** Add automated tests, security scans, backups, limited `MCP` access, secret scanning, and a rollback plan.
 
 ---
 
